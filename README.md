@@ -94,5 +94,7 @@ kubectl apply -f .
 
 Bash
 kubectl get pods,svc,networkpolicy -A
+
+
 Author: [Mario Araos]
 Cloud & DevOps Engineer | CKA | LFCS | Passionate about resilient infrastructure, DevSecOps, and automation.
