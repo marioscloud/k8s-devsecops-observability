@@ -61,6 +61,7 @@ Cluster-wide Node health, capacity, and utilization status.
 Network throughput and request metrics for the active deployment.
 
 🔧 Installation & Deployment
+
 Prerequisites
 Ensure your local environment has the following installed:
 
@@ -71,20 +72,24 @@ K3d & kubectl
 Helm (Optional, for managing the observability stack)
 
 Quick Start Guide
+
 1. Clone the repository:
 
 Bash
 git clone https://github.com/marioscloud/k8s-devsecops-observability.git
 cd k8s-devsecops-observability
+
 2. Provision the Kubernetes Cluster:
 
 Bash
 k3d cluster create mario-cluster -p "8080:80@loadbalancer"
+
 3. Apply Infrastructure Manifests:
 Deploy the application, network policies, and persistent storage:
 
 Bash
 kubectl apply -f .
+
 4. Verify Deployment:
 
 Bash
