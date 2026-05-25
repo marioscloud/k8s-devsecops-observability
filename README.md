@@ -12,6 +12,7 @@ This repository provides a comprehensive Infrastructure as Code (IaC) and DevSec
 
 Moving beyond basic deployment, this architecture is engineered to production-grade standards. It prioritizes a Zero-Trust Security model, enforces shift-left vulnerability scanning, and integrates a full-stack telemetry and observability suite to monitor cluster health in real time.
 
+
 🏗️ Core Architecture & Features
 This platform is engineered around four core DevOps pillars:
 
@@ -38,6 +39,7 @@ Security & Compliance: Aqua Security Trivy, Kubernetes RBAC, Network Policies
 
 Observability Stack: Prometheus, Grafana, Helm
 
+
 ⚙️ CI/CD Pipeline Workflow
 The automated deployment pipeline is triggered on every push to the main branch, enforcing strict quality and security gates:
 
@@ -51,6 +53,7 @@ Security Gate (Trivy): Intercepts the image to scan for vulnerabilities. The pip
 
 Artifact Push: Upon passing the security gate, the verified image is pushed to the container registry.
 
+
 📈 Observability & Dashboards
 The integrated Grafana dashboards provide continuous insights into the cluster's operational state:
 
@@ -59,6 +62,7 @@ Real-time CPU and Memory consumption per Pod.
 Cluster-wide Node health, capacity, and utilization status.
 
 Network throughput and request metrics for the active deployment.
+
 
 🔧 Installation & Deployment
 
@@ -73,22 +77,26 @@ Helm (Optional, for managing the observability stack)
 
 Quick Start Guide
 
+
 1. Clone the repository:
 
 Bash
 git clone https://github.com/marioscloud/k8s-devsecops-observability.git
 cd k8s-devsecops-observability
 
+
 2. Provision the Kubernetes Cluster:
 
 Bash
 k3d cluster create mario-cluster -p "8080:80@loadbalancer"
+
 
 3. Apply Infrastructure Manifests:
 Deploy the application, network policies, and persistent storage:
 
 Bash
 kubectl apply -f .
+
 
 4. Verify Deployment:
 
